@@ -9,7 +9,7 @@
 int get_flag(const char *format, int *i)
 {
 	int j, curr_i;
-	int flags = 0;
+	int flag = 0;
 	const char FLAGS_CH[] = {'-', '+', '0', '#', ' ', '\0'};
 	const int FLAGS_ARR[] = {F_MINUS, F_PLUS, F_ZERO, F_HASH, F_SPACE, 0};
 
@@ -18,7 +18,7 @@ int get_flag(const char *format, int *i)
 		for (j = 0; FLAGS_CH[j] != '\0'; j++)
 			if (format[curr_i] == FLAGS_CH[j])
 			{
-				flags |= FLAGS_ARR[j];
+				flag |= FLAGS_ARR[j];
 				break;
 			}
 
@@ -28,5 +28,5 @@ int get_flag(const char *format, int *i)
 
 	*i = curr_i - 1;
 
-	return (flags);
+	return (flag);
 }

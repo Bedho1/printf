@@ -10,7 +10,7 @@
  * if a flag is passed to _printf
  * Return: number of char printed
  */
-print_non_printable(va_list l, flags_t *f)
+print_non_printable(va_list l, flag_t *f)
 {
 	int i, count = 0;
 	char *res;
@@ -44,7 +44,7 @@ print_non_printable(va_list l, flags_t *f)
  * if a flag is passed to _printf
  * Return: length of the printed string
  */
-int print_rev(va_list l, flags_t *f)
+int print_rev(va_list l, flag_t *f)
 {
 	int i = 0, j;
 	char *s = va_arg(l, char *);
@@ -67,7 +67,7 @@ int print_rev(va_list l, flags_t *f)
  * if a flag is passed to _printf
  * Return: length of the printed string
  */
-int print_rot13(va_list l, flags_t *f)
+int print_rot13(va_list l, flag_t *f)
 {
 	int i, j;
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -97,7 +97,7 @@ int print_rot13(va_list l, flags_t *f)
  * @f: pointer to the struct flags in which we turn the flags on
  * Return: number of char printed
  */
-int print_percent(va_list l, flags_t *f)
+int print_percent(va_list l, flag_t *f)
 {
 	(void)l;
 	(void)f;
